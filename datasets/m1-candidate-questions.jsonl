@@ -1,0 +1,50 @@
+{"question":"NGINX 默认错误日志在哪里？","filename":"nginx-logging.md","evidence":"logs/error.log","answerable":true,"review_status":"candidate"}
+{"question":"如何查看 NGINX 编译时的错误日志路径？","filename":"nginx-logging.md","evidence":"--error-log-path=","answerable":true,"review_status":"candidate"}
+{"question":"NGINX 如何设置错误日志级别为 warn？","filename":"nginx-logging.md","evidence":"error_log logs/error.log warn","answerable":true,"review_status":"candidate"}
+{"question":"如何查看本地 Docker 镜像？","filename":"docker_cheatsheet.pdf","evidence":"docker images","answerable":true,"review_status":"candidate"}
+{"question":"Docker 如何查看正在运行的容器？","filename":"docker_cheatsheet.pdf","evidence":"docker ps","answerable":true,"review_status":"candidate"}
+{"question":"Docker 如何持续查看容器日志？","filename":"docker_cheatsheet.pdf","evidence":"docker logs -f","answerable":true,"review_status":"candidate"}
+{"question":"如何修理量子计算机冷却系统？","filename":null,"evidence":null,"answerable":false,"review_status":"candidate"}
+{"question":"PostgreSQL 18 逻辑复制槽占满磁盘时该如何处理？","filename":null,"evidence":null,"answerable":false,"review_status":"candidate"}
+{"question":"NGINX 调试主要用于识别什么问题？","filename":"nginx-debugging.md","evidence":"identify a bug in the program code","answerable":true,"review_status":"candidate"}
+{"question":"NGINX Plus 的实时活动监控有哪些服务？","filename":"nginx-live-activity-monitoring.md","evidence":"interactive Dashboard and NGINX Plus REST API","answerable":true,"review_status":"candidate"}
+{"question":"NGINX HTTP 负载均衡如何把流量代理到一组服务器？","filename":"nginx-http-load-balancer.md","evidence":"define the group of servers with","answerable":true,"review_status":"candidate"}
+{"question":"NGINX 健康检查如何处理失败的上游服务器？","filename":"nginx-http-health-check.md","evidence":"avoid the servers that have failed","answerable":true,"review_status":"candidate"}
+{"question":"NGINX 反向代理常用于什么场景？","filename":"nginx-reverse-proxy.md","evidence":"distribute the load among several servers","answerable":true,"review_status":"candidate"}
+{"question":"NGINX index 指令有多个文件名时按什么顺序查找？","filename":"nginx-serving-static-content.md","evidence":"searches for files in the specified order","answerable":true,"review_status":"candidate"}
+{"question":"在 Debian 或 Ubuntu 上创建 NGINX 基本认证密码文件需要什么工具？","filename":"nginx-configuring-http-basic-authentication.md","evidence":"apache2-utils","answerable":true,"review_status":"candidate"}
+{"question":"NGINX 如何配置 HTTPS 服务？","filename":"nginx-terminating-ssl-http.md","evidence":"configure an HTTPS server","answerable":true,"review_status":"candidate"}
+{"question":"NGINX Plus 启用缓存后响应保存在哪里？","filename":"nginx-content-caching.md","evidence":"disk cache","answerable":true,"review_status":"candidate"}
+{"question":"Docker 发布容器端口的 docker run 参数形式是什么？","filename":"docker-publishing-ports.md","evidence":"-p HOST_PORT:CONTAINER_PORT","answerable":true,"review_status":"candidate"}
+{"question":"Docker 命名卷 log-data 的文档示例在哪里？","filename":"docker-persisting-container-data.md","evidence":"volume named `log-data`","answerable":true,"review_status":"candidate"}
+{"question":"Docker 在主机与容器之间共享文件有哪些主要存储选项？","filename":"docker-sharing-local-files.md","evidence":"volumes and bind mounts","answerable":true,"review_status":"candidate"}
+{"question":"Docker bridge 网络默认包含什么子网？","filename":"docker-bridge.md","evidence":"IPv4 subnet","answerable":true,"review_status":"candidate"}
+{"question":"Docker 端口发布文档如何描述默认的 IPv4 和 IPv6 访问控制？","filename":"docker-port-publishing.md","evidence":"Docker daemon blocks access to ports","answerable":true,"review_status":"candidate"}
+{"question":"Docker 如何让容器自动启动？","filename":"docker-start-containers-automatically.md","evidence":"restart policies","answerable":true,"review_status":"candidate"}
+{"question":"Docker 容器默认有资源限制吗？","filename":"docker-resource_constraints.md","evidence":"no resource constraints","answerable":true,"review_status":"candidate"}
+{"question":"Docker host 网络模式下容器使用什么网络？","filename":"docker-host.md","evidence":"host network mode","answerable":true,"review_status":"candidate"}
+{"question":"Docker overlay 网络驱动创建什么类型的网络？","filename":"docker-overlay.md","evidence":"distributed network","answerable":true,"review_status":"candidate"}
+{"question":"Kubernetes 排查 Pod 当前状态和最近事件用什么命令？","filename":"kubernetes-debug-pods.md","evidence":"kubectl describe pods ${POD_NAME}","answerable":true,"review_status":"candidate"}
+{"question":"Kubernetes Pod 长时间 Pending 的常见调度原因是什么？","filename":"kubernetes-debug-pods.md","evidence":"insufficient resources of one type or another","answerable":true,"review_status":"candidate"}
+{"question":"Kubernetes Pod 进入 Waiting 后最常见的原因是什么？","filename":"kubernetes-debug-pods.md","evidence":"failure to pull the image.","answerable":true,"review_status":"candidate"}
+{"question":"Kubernetes Pod Pending 阶段是否可能正在下载容器镜像？","filename":"kubernetes-pod-lifecycle.md","evidence":"time spent downloading container images over the network.","answerable":true,"review_status":"candidate"}
+{"question":"CrashLoopBackOff 在 kubectl 输出中属于哪个字段？","filename":"kubernetes-pod-lifecycle.md","evidence":"`CrashLoopBackOff` may appear in the `Status` field","answerable":true,"review_status":"candidate"}
+{"question":"容器反复崩溃后 Kubernetes 的重启延迟如何变化？","filename":"kubernetes-pod-lifecycle.md","evidence":"Kubernetes applies an exponential","answerable":true,"review_status":"candidate"}
+{"question":"如何查看 Kubernetes Deployment 的发布状态？","filename":"kubernetes-deployment.md","evidence":"kubectl rollout status deployment/nginx-deployment","answerable":true,"review_status":"candidate"}
+{"question":"只扩缩容 Deployment 会触发 rollout 吗？","filename":"kubernetes-deployment.md","evidence":"Other updates, such as scaling the Deployment, do not trigger a rollout.","answerable":true,"review_status":"candidate"}
+{"question":"多个控制器能否安全使用重叠的标签选择器？","filename":"kubernetes-deployment.md","evidence":"Do not overlap labels or selectors with other controllers","answerable":true,"review_status":"candidate"}
+{"question":"Service 的 EndpointSlice 没有端点时应该核对什么？","filename":"kubernetes-debug-service.md","evidence":"If the `ENDPOINTS` column is `<none>`","answerable":true,"review_status":"candidate"}
+{"question":"如何列出 hostnames Service 对应的 EndpointSlice？","filename":"kubernetes-debug-service.md","evidence":"kubectl get endpointslices -l kubernetes.io/service-name=hostnames","answerable":true,"review_status":"candidate"}
+{"question":"Service 调试示例中 app=hostnames 是什么？","filename":"kubernetes-debug-service.md","evidence":"The `-l app=hostnames` argument is a label selector","answerable":true,"review_status":"candidate"}
+{"question":"节点压力驱逐会监控哪些资源？","filename":"kubernetes-node-pressure-eviction.md","evidence":"like memory, disk space, and filesystem inodes","answerable":true,"review_status":"candidate"}
+{"question":"发生节点压力驱逐时 Pod 会被设为哪个阶段？","filename":"kubernetes-node-pressure-eviction.md","evidence":"selected pods to `Failed`, and terminates the Pod.","answerable":true,"review_status":"candidate"}
+{"question":"硬驱逐阈值触发时使用多长宽限期？","filename":"kubernetes-node-pressure-eviction.md","evidence":"the kubelet uses a `0s` grace period","answerable":true,"review_status":"candidate"}
+{"question":"kubectl 如何列出所有命名空间中的 Pod？","filename":"kubernetes-quick-reference.md","evidence":"kubectl get pods --all-namespaces","answerable":true,"review_status":"candidate"}
+{"question":"kubectl 如何按容器重启次数排序 Pod？","filename":"kubernetes-quick-reference.md","evidence":"kubectl get pods --sort-by='.status.containerStatuses[0].restartCount'","answerable":true,"review_status":"candidate"}
+{"question":"kubectl 如何以 YAML 查看一个 Pod？","filename":"kubernetes-quick-reference.md","evidence":"kubectl get pod my-pod -o yaml","answerable":true,"review_status":"candidate"}
+{"question":"Kubernetes Service 对象定义哪类端点集合？","filename":"kubernetes-service.md","evidence":"Each Service object defines a logical set of endpoints","answerable":true,"review_status":"candidate"}
+{"question":"Service 如何让客户端不必追踪变化的后端 Pod？","filename":"kubernetes-service.md","evidence":"The Service abstraction enables this decoupling.","answerable":true,"review_status":"candidate"}
+{"question":"Service 控制器根据选择器更新什么对象？","filename":"kubernetes-service.md","evidence":"updates to the set of\nEndpointSlices for the Service.","answerable":true,"review_status":"candidate"}
+{"question":"如何查看 Kubernetes 容器上次崩溃前的日志？","filename":"kubernetes-debug-running-pod.md","evidence":"kubectl logs ${POD_NAME} -c ${CONTAINER_NAME} --previous","answerable":true,"review_status":"candidate"}
+{"question":"kubectl describe 中 Ready 表示什么？","filename":"kubernetes-debug-running-pod.md","evidence":"Ready tells you whether the container passed its last readiness probe.","answerable":true,"review_status":"candidate"}
+{"question":"kubectl describe 中 Restart Count 表示什么？","filename":"kubernetes-debug-running-pod.md","evidence":"Restart Count tells you how many times the container has been restarted","answerable":true,"review_status":"candidate"}

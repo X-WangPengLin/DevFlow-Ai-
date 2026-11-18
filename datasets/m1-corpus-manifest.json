@@ -1,0 +1,170 @@
+[
+  {
+    "filename": "nginx-debugging.md",
+    "source_url": "https://raw.githubusercontent.com/nginx/documentation/6a3949a5536baed5c12e3c25083e66a4e566781e/content/nginx/admin-guide/monitoring/debugging.md",
+    "sha256": "e3f83753c5a8910b25e72cd9a7449ae886c7cedb4e6dde5c892359475e5e8705",
+    "bytes": 14708
+  },
+  {
+    "filename": "nginx-live-activity-monitoring.md",
+    "source_url": "https://raw.githubusercontent.com/nginx/documentation/6a3949a5536baed5c12e3c25083e66a4e566781e/content/nginx/admin-guide/monitoring/live-activity-monitoring.md",
+    "sha256": "bb165ce41fb6c4243f7ad2403184f3dd10ee560ab7686b5640076bb86ff729e8",
+    "bytes": 35522
+  },
+  {
+    "filename": "nginx-http-load-balancer.md",
+    "source_url": "https://raw.githubusercontent.com/nginx/documentation/6a3949a5536baed5c12e3c25083e66a4e566781e/content/nginx/admin-guide/load-balancer/http-load-balancer.md",
+    "sha256": "207718b1b6a0675eb7afbfec6868a18ed2902f2390d192bf5a47317b66e3ab67",
+    "bytes": 27917
+  },
+  {
+    "filename": "nginx-http-health-check.md",
+    "source_url": "https://raw.githubusercontent.com/nginx/documentation/6a3949a5536baed5c12e3c25083e66a4e566781e/content/nginx/admin-guide/load-balancer/http-health-check.md",
+    "sha256": "4ec71bbb17714adf71062bfbd6997239c63b67b73742fcbd475e416c47db90c9",
+    "bytes": 13436
+  },
+  {
+    "filename": "nginx-reverse-proxy.md",
+    "source_url": "https://raw.githubusercontent.com/nginx/documentation/6a3949a5536baed5c12e3c25083e66a4e566781e/content/nginx/admin-guide/web-server/reverse-proxy.md",
+    "sha256": "da72f73de6d5b07cec54bc902cfdee58f5dfcf8c05ab8d108a246bd236e900fb",
+    "bytes": 9361
+  },
+  {
+    "filename": "nginx-serving-static-content.md",
+    "source_url": "https://raw.githubusercontent.com/nginx/documentation/6a3949a5536baed5c12e3c25083e66a4e566781e/content/nginx/admin-guide/web-server/serving-static-content.md",
+    "sha256": "74f29e246b8ce127f9bdf63e800fc5cee4777a8ac16921a2b790e3a692497918",
+    "bytes": 10129
+  },
+  {
+    "filename": "nginx-configuring-http-basic-authentication.md",
+    "source_url": "https://raw.githubusercontent.com/nginx/documentation/6a3949a5536baed5c12e3c25083e66a4e566781e/content/nginx/admin-guide/security-controls/configuring-http-basic-authentication.md",
+    "sha256": "fca84a00ba6a624c4ea045187389ba1d2e7e60ca923678f8f15000a61f42c9e9",
+    "bytes": 6265
+  },
+  {
+    "filename": "nginx-terminating-ssl-http.md",
+    "source_url": "https://raw.githubusercontent.com/nginx/documentation/6a3949a5536baed5c12e3c25083e66a4e566781e/content/nginx/admin-guide/security-controls/terminating-ssl-http.md",
+    "sha256": "37996922577110640f67ea1e5a1a6dd3f64700e252276f3f193737876334f115",
+    "bytes": 17344
+  },
+  {
+    "filename": "nginx-content-caching.md",
+    "source_url": "https://raw.githubusercontent.com/nginx/documentation/6a3949a5536baed5c12e3c25083e66a4e566781e/content/nginx/admin-guide/content-cache/content-caching.md",
+    "sha256": "d6fa87b708bf50e7508540396f951ad81c794d252273f5e1aa360353aac43eba",
+    "bytes": 15738
+  },
+  {
+    "filename": "docker-publishing-ports.md",
+    "source_url": "https://raw.githubusercontent.com/docker/docs/a0442378fca4987b1235614ec917b4138b5d5e5d/content/get-started/docker-concepts/running-containers/publishing-ports.md",
+    "sha256": "aa6e647d51882b7daff859edbd6803f17bf7ae26c6881b226826c2d6c75c23aa",
+    "bytes": 6885
+  },
+  {
+    "filename": "docker-persisting-container-data.md",
+    "source_url": "https://raw.githubusercontent.com/docker/docs/a0442378fca4987b1235614ec917b4138b5d5e5d/content/get-started/docker-concepts/running-containers/persisting-container-data.md",
+    "sha256": "c7613216d945ba3291fa82dcc6b84420bd34c6be99920e5ca29f3f7a687bde41",
+    "bytes": 6906
+  },
+  {
+    "filename": "docker-sharing-local-files.md",
+    "source_url": "https://raw.githubusercontent.com/docker/docs/a0442378fca4987b1235614ec917b4138b5d5e5d/content/get-started/docker-concepts/running-containers/sharing-local-files.md",
+    "sha256": "686577808951d8b6408baf1fed7ec5cc41bbcb5e9ea94cbe25c6522ec2b08869",
+    "bytes": 10368
+  },
+  {
+    "filename": "docker-bridge.md",
+    "source_url": "https://raw.githubusercontent.com/docker/docs/a0442378fca4987b1235614ec917b4138b5d5e5d/content/manuals/engine/network/drivers/bridge.md",
+    "sha256": "f5d1811100422cd6108a833b6485b7745ce7939b51f5826099242dde00b2f3b5",
+    "bytes": 27467
+  },
+  {
+    "filename": "docker-port-publishing.md",
+    "source_url": "https://raw.githubusercontent.com/docker/docs/a0442378fca4987b1235614ec917b4138b5d5e5d/content/manuals/engine/network/port-publishing.md",
+    "sha256": "1af80b5e413b706df7ce2e0be2e865dfa122fdf6df43401e8e7c69ec232e0be6",
+    "bytes": 14191
+  },
+  {
+    "filename": "docker-start-containers-automatically.md",
+    "source_url": "https://raw.githubusercontent.com/docker/docs/a0442378fca4987b1235614ec917b4138b5d5e5d/content/manuals/engine/containers/start-containers-automatically.md",
+    "sha256": "51c7adf0856eb5ecc91a9d9f9b9567c75fbefa02d02abdfd5c3ec50c535a1881",
+    "bytes": 7527
+  },
+  {
+    "filename": "docker-resource_constraints.md",
+    "source_url": "https://raw.githubusercontent.com/docker/docs/a0442378fca4987b1235614ec917b4138b5d5e5d/content/manuals/engine/containers/resource_constraints.md",
+    "sha256": "9da4d895066037917254a089996e2e0de047187734ac922381d7f3b6f4aed53e",
+    "bytes": 18023
+  },
+  {
+    "filename": "docker-host.md",
+    "source_url": "https://raw.githubusercontent.com/docker/docs/a0442378fca4987b1235614ec917b4138b5d5e5d/content/manuals/engine/network/drivers/host.md",
+    "sha256": "46dae954a3545a46af7e45c963e10df48283fe9bf336f5c0e0fe32e519612a6d",
+    "bytes": 5894
+  },
+  {
+    "filename": "docker-overlay.md",
+    "source_url": "https://raw.githubusercontent.com/docker/docs/a0442378fca4987b1235614ec917b4138b5d5e5d/content/manuals/engine/network/drivers/overlay.md",
+    "sha256": "bde471998a0c9b397c021a5fda55114d01872b522b067c34789aa6a07374fa67",
+    "bytes": 16338
+  },
+  {
+    "filename": "kubernetes-debug-pods.md",
+    "source_url": "https://raw.githubusercontent.com/kubernetes/website/1de955ebabe7e17da1ebb4f582635491227f4157/content/en/docs/tasks/debug/debug-application/debug-pods.md",
+    "sha256": "fa0695bdcee4608cf1ebd4d7a3891e353e7764e566eb40ef738c5b98f5bc3645",
+    "bytes": 8225
+  },
+  {
+    "filename": "kubernetes-pod-lifecycle.md",
+    "source_url": "https://raw.githubusercontent.com/kubernetes/website/1de955ebabe7e17da1ebb4f582635491227f4157/content/en/docs/concepts/workloads/pods/pod-lifecycle.md",
+    "sha256": "a22f3a96a41e7613e61beb292fc28fa45b9f68e8f65e493e3e940ed1d35a8b51",
+    "bytes": 56711
+  },
+  {
+    "filename": "kubernetes-deployment.md",
+    "source_url": "https://raw.githubusercontent.com/kubernetes/website/1de955ebabe7e17da1ebb4f582635491227f4157/content/en/docs/concepts/workloads/controllers/deployment.md",
+    "sha256": "b4896e5d45a7d97b0d36ca5fe9e2cac2188ab46ce9cfbc61b4c143220e550c98",
+    "bytes": 59640
+  },
+  {
+    "filename": "kubernetes-debug-service.md",
+    "source_url": "https://raw.githubusercontent.com/kubernetes/website/1de955ebabe7e17da1ebb4f582635491227f4157/content/en/docs/tasks/debug/debug-application/debug-service.md",
+    "sha256": "76915e474e88fbedecbfe205fb45a85867ea4612453358eda73a330ec991262d",
+    "bytes": 23343
+  },
+  {
+    "filename": "kubernetes-node-pressure-eviction.md",
+    "source_url": "https://raw.githubusercontent.com/kubernetes/website/1de955ebabe7e17da1ebb4f582635491227f4157/content/en/docs/concepts/scheduling-eviction/node-pressure-eviction.md",
+    "sha256": "dcfd72453bd65b5ba1ac69b2978b64ccf4181453b9778df7e58d5012e52fd5e9",
+    "bytes": 28212
+  },
+  {
+    "filename": "kubernetes-quick-reference.md",
+    "source_url": "https://raw.githubusercontent.com/kubernetes/website/1de955ebabe7e17da1ebb4f582635491227f4157/content/en/docs/reference/kubectl/quick-reference.md",
+    "sha256": "2591bb535e6b3aa7e7aa8135ca1fd75060540746618c6488360f8b05bda89880",
+    "bytes": 25501
+  },
+  {
+    "filename": "kubernetes-service.md",
+    "source_url": "https://raw.githubusercontent.com/kubernetes/website/1de955ebabe7e17da1ebb4f582635491227f4157/content/en/docs/concepts/services-networking/service.md",
+    "sha256": "124a280dfbc2dad83498c579e960e5d199ca612b727033e2a88da1103e1acb51",
+    "bytes": 45284
+  },
+  {
+    "filename": "kubernetes-debug-running-pod.md",
+    "source_url": "https://raw.githubusercontent.com/kubernetes/website/1de955ebabe7e17da1ebb4f582635491227f4157/content/en/docs/tasks/debug/debug-application/debug-running-pod.md",
+    "sha256": "ec96ce1a6c370020a9162cae98aba5b1a04113365815613ecdb1f658cfa2e08f",
+    "bytes": 28330
+  },
+  {
+    "filename": "nginx-logging.md",
+    "source_url": "https://raw.githubusercontent.com/nginx/documentation/6a3949a5536baed5c12e3c25083e66a4e566781e/content/nginx/admin-guide/monitoring/logging.md",
+    "sha256": "4fd33f8b3f1c0238b96ff8315882d7c666af6145e65b23aff1ad00db564dbafe",
+    "bytes": 15229
+  },
+  {
+    "filename": "docker_cheatsheet.pdf",
+    "source_url": "https://docs.docker.com/get-started/docker_cheatsheet.pdf",
+    "sha256": "7bb9fb82694636bdf5ed579f74bcb31023fb6b8c045a4b37e1903212d3c4f181",
+    "bytes": 535161
+  }
+]
