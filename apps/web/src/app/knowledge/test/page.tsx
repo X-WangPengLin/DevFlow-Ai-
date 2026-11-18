@@ -134,7 +134,7 @@ export default function KnowledgeTestPage() {
   const failed = documents.filter((doc) => doc.status === "failed");
 
   return <main className="workspace test-workspace">
-    <header className="workspace-header"><a href="/knowledge">← 知识库</a><span>M1 · 实时验收</span></header>
+    <header className="workspace-header"><a href="/knowledge">← 知识库</a><a href="/knowledge/review">人工审核评测题 ↗</a></header>
     <div className="workspace-intro"><span className="section-kicker">LIVE ACCEPTANCE</span><h1>M1 验收台</h1><p>页面直接调用当前本机 API 和知识库。示例问题只是输入建议；请按实际返回的文档和原文判断结果。</p></div>
     <div className="test-status-grid">
       <section className="panel"><h2>服务状态</h2><p>API：<strong>{apiHealth}</strong></p><p>PostgreSQL：<strong>{dbHealth}</strong></p><p>本地模型：<strong>{modelStatus}</strong></p>{modelHealth && <p className="hint">Embedding {modelHealth.embedding_model}：{modelHealth.embedding_ready ? "已安装" : "缺失"}<br />Chat {modelHealth.chat_model}：{modelHealth.chat_ready ? "已安装" : "缺失"}</p>}<button type="button" onClick={() => void checkServices()}>重新检查</button><p className="hint">分别读取 /health、/health/db 与 /health/models；模型状态仅检查已安装，实际推理由下方请求验证。</p></section>

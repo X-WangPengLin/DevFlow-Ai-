@@ -268,11 +268,18 @@ def search(base_id: int, query: str, limit: int = 5) -> list[dict]:
     vector = _embed([query])[0]
     distance = Chunk.embedding.cosine_distance(vector)
     with SessionLocal() as session:
-        rows = session.execute(select(Chunk, Document, distance.label("distance"))
+        products = session.scalars(select(Document.product).where(
+            Document.knowledge_base_id == base_id, Document.status == "ready",
+            Document.product.is_not(None)).distinct()).all()
+        mentioned = [product for product in products if product and re.search(
+            rf"(?<![A-Za-z0-9]){re.escape(product)}(?![A-Za-z0-9])", query, re.IGNORECASE)]
+        statement = (select(Chunk, Document, distance.label("distance"))
             .join(Document, Chunk.document_id == Document.id)
             .where(Document.knowledge_base_id == base_id, Document.status == "ready",
-                   Document.embedding_model == get_settings().embedding_model)
-            .order_by(distance).limit(limit)).all()
+                   Document.embedding_model == get_settings().embedding_model))
+        if len(mentioned) == 1:
+            statement = statement.where(Document.product == mentioned[0])
+        rows = session.execute(statement.order_by(distance).limit(limit)).all()
         return [{"chunk_id": chunk.id, "document_id": doc.id, "filename": doc.filename,
                  "source_url": doc.source_url, "sha256": doc.sha256, "product": doc.product, "product_version": doc.product_version,
                  "heading": chunk.heading, "page": chunk.page, "excerpt": chunk.content,
@@ -285,12 +292,12 @@ def answer(base_id: int, question: str) -> dict:
     mentioned = {hit["product"].lower() for hit in hits if hit["product"] and hit["product"].lower() in question.lower()}
     if len(mentioned) == 1:
         hits = [hit for hit in hits if hit["product"] and hit["product"].lower() in mentioned]
-    hits = hits[:5]
     if not hits or hits[0]["score"] < get_settings().min_similarity:
         return {"answer": "当前知识库中没有足够证据回答这个问题。", "citations": [], "answerable": False}
     evidence = "\n\n".join(f"[{i}] 来源：{hit['filename']}\n{hit['excerpt']}" for i, hit in enumerate(hits, 1))
     prompt = ("只根据下列资料回答问题。不要使用外部知识，不要编造来源。若资料不足，请直接写‘证据不足’。"
-              "用简短中文回答；每个命令必须由所引用的片段直接支持，引用资料时写 [1] 等对应编号。\n\n"
+              "优先找直接回答问题的原文，仔细区分肯定与否定语句，不要根据相似话题猜测结论。"
+              "用简短中文回答；结论和每个命令必须由所引用的片段直接支持，引用资料时写 [1] 等对应编号。\n\n"
               + evidence + "\n\n问题：" + question)
     response = _ollama("/api/chat", {"model": get_settings().chat_model, "stream": False,
                                      "think": False, "messages": [{"role": "user", "content": prompt}]})

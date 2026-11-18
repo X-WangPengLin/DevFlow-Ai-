@@ -13,11 +13,15 @@ Alembic → PostgreSQL（vector 扩展、知识库/文档/片段表、片段原�
 ## 代码边界
 
 - `apps/web/src/app`：首页、知识库工作台和 `/knowledge/test` M1 验收页；`components/health-status.tsx`：真实 API 状态读取。验收页复用引用卡片，直接读取现有健康、文档、Dense 检索和回答接口。
+- `/knowledge/review`：M1 人工审核工作台，读取版本化 CSV 候选题，调用原文接口展示证据上下文，保存人工审核状态、审核人和备注。
 - `services/api/src/devflow_rag/api`：路由；`core/config.py`：环境配置；`core/database.py`：连接与基础会话；`main.py`：应用、中间件与异常处理。
 - `services/api/src/devflow_rag/knowledge.py`：入库、切分、向量化、检索与回答。
 - `GET /api/documents/{id}/text`：从保留原件读取规范化 Markdown 文本或指定 PDF 页文本，并核对原件哈希；引用卡片按片段偏移核对后高亮上下文。
 - `GET /health/models`：检查 Ollama 已安装模型；验收页一键检查调用真实检索、回答和原文接口。回答链路对明确提及的单一产品只使用对应产品片段，并对常见命令进行引用文本核对。
+- Dense 检索对问题中唯一明确提及且知识库中存在的产品先做数据库过滤，再按向量距离取 Top-K；多产品或未提及产品的问题保持跨产品检索。审核页的 `GET /api/evaluation/questions/{id}/retrieval?base_id=...` 只读查询真实 Top-50，报告候选证据排名和 Top-5 片段，用于开发诊断。
+- 用户检索及候选 Recall@5 仍按 Dense Top-5；回答链路为寻找直接证据读取 Dense Top-20，并在返回引用前检查引用编号与常见命令文本。它不能自动验证所有自然语言结论，生成忠实度需人工审核。
 - `services/api/alembic`：扩展与知识表迁移；`infra/docker-compose.yml`：本地数据库。
+- `services/api/src/devflow_rag/review_queue.py`：读取和原子更新 `datasets/m1-review-queue.csv`；审核正例时再核对数据库原件的 SHA-256 和文本范围。`GET/PATCH /api/evaluation/questions` 提供本机审核接口，没有引入评测数据库表。
 
 ## 未来演进
 

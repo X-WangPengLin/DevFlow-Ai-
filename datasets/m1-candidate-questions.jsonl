@@ -33,7 +33,7 @@
 {"question":"如何查看 Kubernetes Deployment 的发布状态？","filename":"kubernetes-deployment.md","evidence":"kubectl rollout status deployment/nginx-deployment","answerable":true,"review_status":"candidate"}
 {"question":"只扩缩容 Deployment 会触发 rollout 吗？","filename":"kubernetes-deployment.md","evidence":"Other updates, such as scaling the Deployment, do not trigger a rollout.","answerable":true,"review_status":"candidate"}
 {"question":"多个控制器能否安全使用重叠的标签选择器？","filename":"kubernetes-deployment.md","evidence":"Do not overlap labels or selectors with other controllers","answerable":true,"review_status":"candidate"}
-{"question":"Service 的 EndpointSlice 没有端点时应该核对什么？","filename":"kubernetes-debug-service.md","evidence":"If the `ENDPOINTS` column is `<none>`","answerable":true,"review_status":"candidate"}
+{"question":"Service 的 EndpointSlice 没有端点时应该核对什么？","filename":"kubernetes-debug-service.md","evidence":"you should check that\nthe `spec.selector` field of your Service actually selects for\n`metadata.labels` values on your Pods.","answerable":true,"review_status":"candidate"}
 {"question":"如何列出 hostnames Service 对应的 EndpointSlice？","filename":"kubernetes-debug-service.md","evidence":"kubectl get endpointslices -l kubernetes.io/service-name=hostnames","answerable":true,"review_status":"candidate"}
 {"question":"Service 调试示例中 app=hostnames 是什么？","filename":"kubernetes-debug-service.md","evidence":"The `-l app=hostnames` argument is a label selector","answerable":true,"review_status":"candidate"}
 {"question":"节点压力驱逐会监控哪些资源？","filename":"kubernetes-node-pressure-eviction.md","evidence":"like memory, disk space, and filesystem inodes","answerable":true,"review_status":"candidate"}
@@ -46,5 +46,5 @@
 {"question":"Service 如何让客户端不必追踪变化的后端 Pod？","filename":"kubernetes-service.md","evidence":"The Service abstraction enables this decoupling.","answerable":true,"review_status":"candidate"}
 {"question":"Service 控制器根据选择器更新什么对象？","filename":"kubernetes-service.md","evidence":"updates to the set of\nEndpointSlices for the Service.","answerable":true,"review_status":"candidate"}
 {"question":"如何查看 Kubernetes 容器上次崩溃前的日志？","filename":"kubernetes-debug-running-pod.md","evidence":"kubectl logs ${POD_NAME} -c ${CONTAINER_NAME} --previous","answerable":true,"review_status":"candidate"}
-{"question":"kubectl describe 中 Ready 表示什么？","filename":"kubernetes-debug-running-pod.md","evidence":"Ready tells you whether the container passed its last readiness probe.","answerable":true,"review_status":"candidate"}
+{"question":"kubectl describe pod 的容器详情中 Ready 字段表示什么？","filename":"kubernetes-debug-running-pod.md","evidence":"Ready tells you whether the container passed its last readiness probe.","answerable":true,"review_status":"candidate"}
 {"question":"kubectl describe 中 Restart Count 表示什么？","filename":"kubernetes-debug-running-pod.md","evidence":"Restart Count tells you how many times the container has been restarted","answerable":true,"review_status":"candidate"}

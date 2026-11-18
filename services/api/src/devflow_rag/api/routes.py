@@ -4,7 +4,7 @@ from pydantic import BaseModel, Field
 from sqlalchemy.exc import SQLAlchemyError
 
 from devflow_rag.core.database import check_database
-from devflow_rag import knowledge
+from devflow_rag import knowledge, review_queue
 
 router = APIRouter()
 
@@ -34,6 +34,28 @@ class BaseCreate(BaseModel):
 
 class Query(BaseModel):
     question: str = Field(min_length=2, max_length=2000)
+
+
+class ReviewUpdate(BaseModel):
+    status: str
+    reviewer: str = Field(default="", max_length=120)
+    notes: str = Field(default="", max_length=2000)
+    verified: bool = False
+
+
+@router.get("/api/evaluation/questions")
+def review_questions() -> list[dict]:
+    return review_queue.list_questions()
+
+
+@router.get("/api/evaluation/questions/{question_id}/retrieval")
+def review_retrieval(question_id: str, base_id: int) -> dict:
+    return review_queue.retrieval_check(question_id, base_id)
+
+
+@router.patch("/api/evaluation/questions/{question_id}")
+def update_review(question_id: str, body: ReviewUpdate) -> dict:
+    return review_queue.save_review(question_id, body.status, body.reviewer, body.notes, body.verified)
 
 
 @router.get("/api/knowledge-bases")
